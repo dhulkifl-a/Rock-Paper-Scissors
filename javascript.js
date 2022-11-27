@@ -10,3 +10,19 @@ function getComputerChoice(){
     }
 }
 
+function playRound(playerSelection){
+    const computerSelection = getComputerChoice();
+
+    if (playerSelection == "Rock" && computerSelection == "Scissors") {
+        return "You Win! Rock beats Scissors";
+    } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
+        return "You Win! Scissors beats Paper";
+    } else if (playerSelection == "Paper" && computerSelection == "Rock"){
+        return "You Win! Rock beats Scissors"
+    } else {
+        return "You lose! Try again!"
+    }
+}
+
+const playerSelection = "Rock";
+console.log(playRound(playerSelection));
