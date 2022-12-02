@@ -12,13 +12,14 @@ function getComputerChoice(){
 
 function playRound(playerSelection){
     const computerSelection = getComputerChoice();
-    const playerSelectionCapital = playerSelection.CharAt(0).toUpperCase() + playerSelection.slice(1)
+    console.log(computerSelection)
+    const playerSelectionCapital = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)
     if (playerSelectionCapital == "Rock" && computerSelection == "Scissors") {
         return "You Win! Rock beats Scissors!";
     } else if (playerSelectionCapital == "Scissors" && computerSelection == "Paper") {
         return "You Win! Scissors beats Paper!";
     } else if (playerSelectionCapital == "Paper" && computerSelection == "Rock"){
-        return "You Win! Rock beats Scissors!"
+        return "You Win! Paper beats Rocks!"
     } else if (playerSelectionCapital == "Rock" && computerSelection == "Paper"){
         return "You lose! Paper beats Rock!"
     } else if (playerSelectionCapital == "Scissors" && computerSelection == "Rock"){
@@ -28,5 +29,5 @@ function playRound(playerSelection){
     }
 }
 
-const playerSelection = "Rock";
+const playerSelection = "paper";
 console.log(playRound(playerSelection));
