@@ -24,13 +24,13 @@ function playRound(playerSelection){
         return "You lose! Paper beats Rock!";
     } else if (playerSelectionCapital == "Scissors" && computerSelection == "Rock"){
         return "You lose! Rock beats Scissors!";
-    } else if (playerSelection == "Paper" && computerSelection == "Scissors"){
+    } else if (playerSelectionCapital == "Paper" && computerSelection == "Scissors"){
         return "You lose! Scissors beats Paper!";
-    } else if (playerSelection == "Paper" && computerSelection == "Paper") {
+    } else if (playerSelectionCapital == "Paper" && computerSelection == "Paper") {
         return "It's a Draw!";
-    } else if (playerSelection == "Rock" && computerSelection == "Rock"){
+    } else if (playerSelectionCapital == "Rock" && computerSelection == "Rock"){
         return "It's a Draw!";
-    } else if (playerSelection == "Scissors" && computerSelection == "Scissors") {
+    } else if (playerSelectionCapital == "Scissors" && computerSelection == "Scissors") {
         return "It's a Draw!"
     }
 }
