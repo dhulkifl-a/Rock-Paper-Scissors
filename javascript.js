@@ -21,11 +21,17 @@ function playRound(playerSelection){
     } else if (playerSelectionCapital == "Paper" && computerSelection == "Rock"){
         return "You Win! Paper beats Rocks!"
     } else if (playerSelectionCapital == "Rock" && computerSelection == "Paper"){
-        return "You lose! Paper beats Rock!"
+        return "You lose! Paper beats Rock!";
     } else if (playerSelectionCapital == "Scissors" && computerSelection == "Rock"){
-        return "You lose! Rock beats Scissors!"
+        return "You lose! Rock beats Scissors!";
     } else if (playerSelection == "Paper" && computerSelection == "Scissors"){
-        return "You lose! Scissors beats Paper!"
+        return "You lose! Scissors beats Paper!";
+    } else if (playerSelection == "Paper" && computerSelection == "Paper") {
+        return "It's a Draw!";
+    } else if (playerSelection == "Rock" && computerSelection == "Rock"){
+        return "It's a Draw!";
+    } else if (playerSelection == "Scissors" && computerSelection == "Scissors") {
+        return "It's a Draw!"
     }
 }
 
