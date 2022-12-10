@@ -10,30 +10,45 @@ function getComputerChoice(){
     }
 }
 
+const playerSelection = "paper";
+
 function playRound(playerSelection){
     const computerSelection = getComputerChoice();
     console.log(computerSelection)
     const playerSelectionCapital = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)
     if (playerSelectionCapital == "Rock" && computerSelection == "Scissors") {
-        return "You Win! Rock beats Scissors!";
+        return true;
     } else if (playerSelectionCapital == "Scissors" && computerSelection == "Paper") {
-        return "You Win! Scissors beats Paper!";
+        return true;
     } else if (playerSelectionCapital == "Paper" && computerSelection == "Rock"){
-        return "You Win! Paper beats Rocks!"
+        return true;
     } else if (playerSelectionCapital == "Rock" && computerSelection == "Paper"){
-        return "You lose! Paper beats Rock!";
+        return false;
     } else if (playerSelectionCapital == "Scissors" && computerSelection == "Rock"){
-        return "You lose! Rock beats Scissors!";
+        return false;
     } else if (playerSelectionCapital == "Paper" && computerSelection == "Scissors"){
-        return "You lose! Scissors beats Paper!";
+        return false;
     } else if (playerSelectionCapital == "Paper" && computerSelection == "Paper") {
-        return "It's a Draw!";
+        return NaN;
     } else if (playerSelectionCapital == "Rock" && computerSelection == "Rock"){
-        return "It's a Draw!";
+        return NaN;
     } else if (playerSelectionCapital == "Scissors" && computerSelection == "Scissors") {
-        return "It's a Draw!"
+        return NaN;
     }
 }
 
-const playerSelection = "paper";
-console.log(playRound(playerSelection));
+function game(){
+    let playerScore = 0;
+    let computerScore = 0;
+    let value = playRound();
+    for (let i = 0; i < 5; i++){
+        if (value == true) {
+            playerScore ++;
+        } else if (value == false) {
+            computerScore ++;
+        }
+        console.log(playerScore);
+        console.log(computerScore);
+    }
+}
+
