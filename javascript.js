@@ -10,9 +10,8 @@ function getComputerChoice(){
     }
 }
 
-const playerSelection = "paper";
-
-function playRound(playerSelection){
+function playRound(){
+    let playerSelection = prompt("Pick between Rock, Paper or Scissors")
     const computerSelection = getComputerChoice();
     console.log(computerSelection)
     const playerSelectionCapital = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)
@@ -29,26 +28,34 @@ function playRound(playerSelection){
     } else if (playerSelectionCapital == "Paper" && computerSelection == "Scissors"){
         return false;
     } else if (playerSelectionCapital == "Paper" && computerSelection == "Paper") {
-        return NaN;
+        return null;
     } else if (playerSelectionCapital == "Rock" && computerSelection == "Rock"){
-        return NaN;
+        return null;
     } else if (playerSelectionCapital == "Scissors" && computerSelection == "Scissors") {
-        return NaN;
+        return null;
     }
 }
+
 
 function game(){
     let playerScore = 0;
     let computerScore = 0;
-    let value = playRound();
     for (let i = 0; i < 5; i++){
+    let value = playRound();
         if (value == true) {
             playerScore ++;
+            console.log("player wins")
+            console.log(playerScore)
         } else if (value == false) {
             computerScore ++;
+            console.log("computer wins")
+            console.log(computerScore)
+        } else {
+            console.log("It's a Draw!")
         }
-        console.log(playerScore);
-        console.log(computerScore);
+        console.log("------------------")
     }
+    return playerScore + computerScore
 }
 
+console.log(game())
