@@ -13,8 +13,9 @@ function getComputerChoice(){
 function playRound(){
     let playerSelection = prompt("Pick between Rock, Paper or Scissors")
     const computerSelection = getComputerChoice();
-    console.log(computerSelection)
+    console.log("Computer chose " + computerSelection)
     const playerSelectionCapital = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)
+    console.log("Player chose "+ playerSelectionCapital)
     if (playerSelectionCapital == "Rock" && computerSelection == "Scissors") {
         return true;
     } else if (playerSelectionCapital == "Scissors" && computerSelection == "Paper") {
@@ -45,17 +46,28 @@ function game(){
         if (value == true) {
             playerScore ++;
             console.log("player wins")
-            console.log(playerScore)
+            console.log("The players Score is " + playerScore)
+            console.log("The computers Score is " + computerScore)
         } else if (value == false) {
             computerScore ++;
             console.log("computer wins")
-            console.log(computerScore)
+            console.log("The computers Score is " + computerScore)
+            console.log("The players Score is " + playerScore)
         } else {
             console.log("It's a Draw!")
+            console.log("The computers Score is " + computerScore)
+            console.log("The players Score is " + playerScore)
         }
         console.log("------------------")
     }
-    return playerScore + computerScore
+    
+    if (playerScore > computerScore) {
+        return "You won the game!"
+    } else if (computerScore > playerScore) {
+        return "gg you lost to the computer!"
+    } else {
+        return "It's a draw, play again?"
+    }
 }
 
 console.log(game())
