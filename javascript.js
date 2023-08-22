@@ -11,7 +11,7 @@ function getComputerChoice(){
 }
 
 function playRound(){
-    let playerSelection = prompt("Pick between Rock, Paper or Scissors")
+    //let playerSelection = prompt("Pick between Rock, Paper or Scissors")
     const computerSelection = getComputerChoice();
     console.log("Computer chose " + computerSelection)
     const playerSelectionCapital = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase()
