@@ -10,3 +10,11 @@ body, html {
     font-family: sans-serif;
 }
 
+.container {
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
