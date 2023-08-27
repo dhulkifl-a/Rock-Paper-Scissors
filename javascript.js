@@ -13,28 +13,41 @@ function getComputerChoice(){
 
 //Can be kept the same but remove then prompt
 function playRound(){
+    const Rock = document.querySelector('.Rock');
+    Rock.addEventListener('click', () => {
+        playerSelection = 'Rock'
+    })
+
+    const Paper = document.querySelector('.Paper');
+    Rock.addEventListener('click', () => {
+        playerSelection = 'Paper'
+    })
+
+    const Scissors = document.querySelector('.Scissors');
+    Rock.addEventListener('click', () => {
+        playerSelection = 'Rock'
+    })
     //let playerSelection = prompt("Pick between Rock, Paper or Scissors")
     const computerSelection = getComputerChoice();
     console.log("Computer chose " + computerSelection)
-    const playerSelectionCapital = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase()
-    console.log("Player chose "+ playerSelectionCapital)
-    if (playerSelectionCapital == "Rock" && computerSelection == "Scissors") {
+    console.log("Player chose "+ playerSelection)
+    if (playerSelection == "Rock" && computerSelection == "Scissors") {
         return true;
-    } else if (playerSelectionCapital == "Scissors" && computerSelection == "Paper") {
+    } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
         return true;
-    } else if (playerSelectionCapital == "Paper" && computerSelection == "Rock"){
+    } else if (playerSelection == "Paper" && computerSelection == "Rock"){
         return true;
-    } else if (playerSelectionCapital == "Rock" && computerSelection == "Paper"){
+    } else if (playerSelection == "Rock" && computerSelection == "Paper"){
         return false;
-    } else if (playerSelectionCapital == "Scissors" && computerSelection == "Rock"){
+    } else if (playerSelection == "Scissors" && computerSelection == "Rock"){
         return false;
-    } else if (playerSelectionCapital == "Paper" && computerSelection == "Scissors"){
+    } else if (playerSelection == "Paper" && computerSelection == "Scissors"){
         return false;
-    } else if (playerSelectionCapital == "Paper" && computerSelection == "Paper") {
+    } else if (playerSelection == "Paper" && computerSelection == "Paper") {
         return null;
-    } else if (playerSelectionCapital == "Rock" && computerSelection == "Rock"){
+    } else if (playerSelection == "Rock" && computerSelection == "Rock"){
         return null;
-    } else if (playerSelectionCapital == "Scissors" && computerSelection == "Scissors") {
+    } else if (playerSelection == "Scissors" && computerSelection == "Scissors") {
         return null;
     }
 }
@@ -72,4 +85,4 @@ function game(){
     }
 }
 
-console.log(game())
+// console.log(game())
