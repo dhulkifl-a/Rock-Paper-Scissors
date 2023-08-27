@@ -43,7 +43,7 @@ function playRound(){
 function game(){
     let playerScore = 0;
     let computerScore = 0;
-    for (let i = 0; i < 5; i++){
+    
     let value = playRound();
         if (value == true) {
             playerScore ++;
@@ -61,7 +61,7 @@ function game(){
             console.log("The players Score is " + playerScore)
         }
         console.log("------------------")
-    }
+    
     
     if (playerScore > computerScore) {
         return "You won the game!"
