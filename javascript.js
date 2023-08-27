@@ -1,3 +1,18 @@
+const Rock = document.querySelector('.Rock');
+Rock.addEventListener('click', () => {
+    playerSelection = 'Rock'
+})
+
+const Paper = document.querySelector('.Paper');
+Rock.addEventListener('click', () => {
+    playerSelection = 'Paper'
+})
+
+const Scissors = document.querySelector('.Scissors');
+Rock.addEventListener('click', () => {
+    playerSelection = 'Rock'
+})
+
 //This needs to be updated
 function getComputerChoice(){
     let num = Math.floor((Math.random() * 3) + 1);
@@ -13,20 +28,6 @@ function getComputerChoice(){
 
 //Can be kept the same but remove then prompt
 function playRound(){
-    const Rock = document.querySelector('.Rock');
-    Rock.addEventListener('click', () => {
-        playerSelection = 'Rock'
-    })
-
-    const Paper = document.querySelector('.Paper');
-    Rock.addEventListener('click', () => {
-        playerSelection = 'Paper'
-    })
-
-    const Scissors = document.querySelector('.Scissors');
-    Rock.addEventListener('click', () => {
-        playerSelection = 'Rock'
-    })
     //let playerSelection = prompt("Pick between Rock, Paper or Scissors")
     const computerSelection = getComputerChoice();
     console.log("Computer chose " + computerSelection)
