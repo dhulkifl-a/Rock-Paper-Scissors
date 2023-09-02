@@ -1,19 +1,21 @@
-const Rock = document.querySelector('.Rock');
+let playerSelection = "";
+
+const Rock = document.querySelector('#Rock');
 Rock.addEventListener('click', () => {
-    console.log('Rock')
-    playerSelection = 'Rock'
+    console.log("Rock")
+    playerSelection = "Rock"
 })
 
-const Paper = document.querySelector('.Paper');
-Rock.addEventListener('click', () => {
-    console.log('Paper')
-    playerSelection = 'Paper'
+const Paper = document.querySelector('#Paper');
+Paper.addEventListener('click', () => {
+    console.log("Paper")
+    playerSelection = "Paper";
 })
 
-const Scissors = document.querySelector('.Scissors');
-Rock.addEventListener('click', () => {
+const Scissors = document.querySelector('#Scissors');
+Scissors.addEventListener('click', () => {
     console.log('Scissors')
-    playerSelection = 'Scissors'
+    playerSelection = 'Scissors';
 })
 
 //This needs to be updated
@@ -31,10 +33,9 @@ function getComputerChoice(){
 
 //Can be kept the same but remove then prompt
 function playRound(){
-    //let playerSelection = prompt("Pick between Rock, Paper or Scissors")
     const computerSelection = getComputerChoice();
-    console.log("Computer chose " + computerSelection)
-    console.log("Player chose "+ playerSelection)
+    // console.log("Computer chose " + computerSelection)
+    // console.log("Player chose "+ playerSelection)
     if (playerSelection == "Rock" && computerSelection == "Scissors") {
         return true;
     } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
