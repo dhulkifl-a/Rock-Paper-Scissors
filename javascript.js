@@ -1,6 +1,4 @@
 
-
-
 const Rock = document.querySelector('#Rock');
 Rock.addEventListener('click', () => {
     const computerSelection = getComputerChoice();
