@@ -1,5 +1,5 @@
 
-function getPlayerChoice(){
+
 
 const Rock = document.querySelector('#Rock');
 Rock.addEventListener('click', () => {
@@ -81,7 +81,7 @@ Scissors.addEventListener('click', () => {
         return null;
     }
 })
-}
+
 //This needs to be updated
 function getComputerChoice(){
     let num = Math.floor((Math.random() * 3) + 1);
