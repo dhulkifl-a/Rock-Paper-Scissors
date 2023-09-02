@@ -58,7 +58,7 @@ Paper.addEventListener('click', () => {
 const Scissors = document.querySelector('#Scissors');
 Scissors.addEventListener('click', () => {
     const computerSelection = getComputerChoice();
-    const playerSelection = getPlayerChoice();
+    const playerSelection = Scissors
     console.log("Computer chose " + computerSelection)
     console.log("Player chose " + playerSelection)
     if (playerSelection == "Rock" && computerSelection == "Scissors") {
