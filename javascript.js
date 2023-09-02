@@ -1,16 +1,19 @@
 const Rock = document.querySelector('.Rock');
 Rock.addEventListener('click', () => {
+    console.log('Rock')
     playerSelection = 'Rock'
 })
 
 const Paper = document.querySelector('.Paper');
 Rock.addEventListener('click', () => {
+    console.log('Paper')
     playerSelection = 'Paper'
 })
 
 const Scissors = document.querySelector('.Scissors');
 Rock.addEventListener('click', () => {
-    playerSelection = 'Rock'
+    console.log('Scissors')
+    playerSelection = 'Scissors'
 })
 
 //This needs to be updated
