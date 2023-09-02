@@ -3,20 +3,83 @@ function getPlayerChoice(){
 
 const Rock = document.querySelector('#Rock');
 Rock.addEventListener('click', () => {
-    console.log("Rock")
-    return "Rock"
+    const computerSelection = getComputerChoice();
+    const playerSelection = "Rock";
+    console.log("Computer chose " + computerSelection)
+    console.log("Player chose " + playerSelection)
+    if (playerSelection == "Rock" && computerSelection == "Scissors") {
+        return true;
+    } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
+        return true;
+    } else if (playerSelection == "Paper" && computerSelection == "Rock") {
+        return true;
+    } else if (playerSelection == "Rock" && computerSelection == "Paper") {
+        return false;
+    } else if (playerSelection == "Scissors" && computerSelection == "Rock") {
+        return false;
+    } else if (playerSelection == "Paper" && computerSelection == "Scissors") {
+        return false;
+    } else if (playerSelection == "Paper" && computerSelection == "Paper") {
+        return null;
+    } else if (playerSelection == "Rock" && computerSelection == "Rock") {
+        return null;
+    } else if (playerSelection == "Scissors" && computerSelection == "Scissors") {
+        return null;
+    }
 })
 
 const Paper = document.querySelector('#Paper');
 Paper.addEventListener('click', () => {
-    console.log("Paper")
-    return "Paper";
+    const computerSelection = getComputerChoice();
+    const playerSelection = "Paper"
+    console.log("Computer chose " + computerSelection)
+    console.log("Player chose " + playerSelection)
+    if (playerSelection == "Rock" && computerSelection == "Scissors") {
+        return true;
+    } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
+        return true;
+    } else if (playerSelection == "Paper" && computerSelection == "Rock") {
+        return true;
+    } else if (playerSelection == "Rock" && computerSelection == "Paper") {
+        return false;
+    } else if (playerSelection == "Scissors" && computerSelection == "Rock") {
+        return false;
+    } else if (playerSelection == "Paper" && computerSelection == "Scissors") {
+        return false;
+    } else if (playerSelection == "Paper" && computerSelection == "Paper") {
+        return null;
+    } else if (playerSelection == "Rock" && computerSelection == "Rock") {
+        return null;
+    } else if (playerSelection == "Scissors" && computerSelection == "Scissors") {
+        return null;
+    }
 })
 
 const Scissors = document.querySelector('#Scissors');
 Scissors.addEventListener('click', () => {
-    console.log('Scissors')
-    return 'Scissors';
+    const computerSelection = getComputerChoice();
+    const playerSelection = getPlayerChoice();
+    console.log("Computer chose " + computerSelection)
+    console.log("Player chose " + playerSelection)
+    if (playerSelection == "Rock" && computerSelection == "Scissors") {
+        return true;
+    } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
+        return true;
+    } else if (playerSelection == "Paper" && computerSelection == "Rock") {
+        return true;
+    } else if (playerSelection == "Rock" && computerSelection == "Paper") {
+        return false;
+    } else if (playerSelection == "Scissors" && computerSelection == "Rock") {
+        return false;
+    } else if (playerSelection == "Paper" && computerSelection == "Scissors") {
+        return false;
+    } else if (playerSelection == "Paper" && computerSelection == "Paper") {
+        return null;
+    } else if (playerSelection == "Rock" && computerSelection == "Rock") {
+        return null;
+    } else if (playerSelection == "Scissors" && computerSelection == "Scissors") {
+        return null;
+    }
 })
 }
 //This needs to be updated
@@ -92,4 +155,4 @@ function game(){
     }
 }
 
-console.log(playRound())
+//console.log(playRound())
