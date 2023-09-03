@@ -5,18 +5,25 @@ Rock.addEventListener('click', () => {
     const playerSelection = "Rock";
     console.log("Computer chose " + computerSelection)
     console.log("Player chose " + playerSelection)
+    let playerValue = document.getElementsByClassName('playerScore');
+    let computerValue = document.getElementsByClassName('compScore');
+    console.log(playerValue[0])
+    let playerScore = parseInt(playerValue[0]);
+    let computerScore = parseInt(computerValue);
+    console.log(playerScore)
+    console.log(computerScore)
     if (playerSelection == "Rock" && computerSelection == "Scissors") {
-        return true;
+        return playerScore++;
     } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
-        return true;
+        return playerScore++;
     } else if (playerSelection == "Paper" && computerSelection == "Rock") {
-        return true;
+        return playerScore++;
     } else if (playerSelection == "Rock" && computerSelection == "Paper") {
-        return false;
+        return computerScore++;
     } else if (playerSelection == "Scissors" && computerSelection == "Rock") {
-        return false;
+        return computerScore++;
     } else if (playerSelection == "Paper" && computerSelection == "Scissors") {
-        return false;
+        return computerScore++;
     } else if (playerSelection == "Paper" && computerSelection == "Paper") {
         return null;
     } else if (playerSelection == "Rock" && computerSelection == "Rock") {
@@ -24,26 +31,35 @@ Rock.addEventListener('click', () => {
     } else if (playerSelection == "Scissors" && computerSelection == "Scissors") {
         return null;
     }
+
+    playerValue.innerHTML = playerScore;
+    computerValue.innerHTML = computerScore;
 })
 
 const Paper = document.querySelector('#Paper');
 Paper.addEventListener('click', () => {
     const computerSelection = getComputerChoice();
-    const playerSelection = "Paper"
+    const playerSelection = "Paper";
     console.log("Computer chose " + computerSelection)
     console.log("Player chose " + playerSelection)
+    let playerValue = document.getElementsByClassName('playerScore');
+    let computerValue = document.getElementsByClassName('compScore');
+    let playerScore = parseInt(playerValue);
+    let computerScore = parseInt(computerValue);
+    console.log(playerScore)
+    console.log(computerScore)
     if (playerSelection == "Rock" && computerSelection == "Scissors") {
-        return true;
+        return playerScore++;
     } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
-        return true;
+        return playerScore++;
     } else if (playerSelection == "Paper" && computerSelection == "Rock") {
-        return true;
+        return playerScore++;
     } else if (playerSelection == "Rock" && computerSelection == "Paper") {
-        return false;
+        return computerScore++;
     } else if (playerSelection == "Scissors" && computerSelection == "Rock") {
-        return false;
+        return computerScore++;
     } else if (playerSelection == "Paper" && computerSelection == "Scissors") {
-        return false;
+        return computerScore++;
     } else if (playerSelection == "Paper" && computerSelection == "Paper") {
         return null;
     } else if (playerSelection == "Rock" && computerSelection == "Rock") {
@@ -51,6 +67,10 @@ Paper.addEventListener('click', () => {
     } else if (playerSelection == "Scissors" && computerSelection == "Scissors") {
         return null;
     }
+
+
+    playerValue.innerHTML = playerScore;
+    computerValue.innerHTML = computerScore;
 })
 
 const Scissors = document.querySelector('#Scissors');
@@ -59,18 +79,24 @@ Scissors.addEventListener('click', () => {
     const playerSelection = "Scissors"
     console.log("Computer chose " + computerSelection)
     console.log("Player chose " + playerSelection)
+    let playerValue = document.getElementsByClassName('playerScore');
+    let computerValue = document.getElementsByClassName('compScore');
+    let playerScore = parseInt(playerValue);
+    let computerScore = parseInt(computerValue);
+    console.log(playerScore)
+    console.log(computerScore)
     if (playerSelection == "Rock" && computerSelection == "Scissors") {
-        return true;
+        return playerScore++;
     } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
-        return true;
+        return playerScore++;
     } else if (playerSelection == "Paper" && computerSelection == "Rock") {
-        return true;
+        return playerScore++;
     } else if (playerSelection == "Rock" && computerSelection == "Paper") {
-        return false;
+        return computerScore++;
     } else if (playerSelection == "Scissors" && computerSelection == "Rock") {
-        return false;
+        return computerScore++;
     } else if (playerSelection == "Paper" && computerSelection == "Scissors") {
-        return false;
+        return computerScore++;
     } else if (playerSelection == "Paper" && computerSelection == "Paper") {
         return null;
     } else if (playerSelection == "Rock" && computerSelection == "Rock") {
@@ -78,6 +104,11 @@ Scissors.addEventListener('click', () => {
     } else if (playerSelection == "Scissors" && computerSelection == "Scissors") {
         return null;
     }
+
+    console.log(playerScore)
+    console.log(computerScore)
+    playerValue.innerHTML = playerScore;
+    computerValue.innerHTML = computerScore;
 })
 
 //This needs to be updated
