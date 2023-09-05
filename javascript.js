@@ -7,33 +7,33 @@ Rock.addEventListener('click', () => {
     console.log("Player chose " + playerSelection)
     let playerValue = document.getElementById("playerScore").innerHTML;
     let computerValue = document.getElementById('compScore').innerHTML;
-    console.log(playerValue);
     let playerScore = parseInt(playerValue);
     let computerScore = parseInt(computerValue);
-    console.log(playerScore+15)
-    console.log(computerScore)
+    
     if (playerSelection == "Rock" && computerSelection == "Scissors") {
-        return playerScore++;
+        playerScore++;
     } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
-        return playerScore++;
+        playerScore++;
     } else if (playerSelection == "Paper" && computerSelection == "Rock") {
-        return playerScore++;
+        playerScore++;
     } else if (playerSelection == "Rock" && computerSelection == "Paper") {
-        return computerScore++;
+        computerScore++;
     } else if (playerSelection == "Scissors" && computerSelection == "Rock") {
-        return computerScore++;
+        computerScore++;
     } else if (playerSelection == "Paper" && computerSelection == "Scissors") {
-        return computerScore++;
+        computerScore++;
     } else if (playerSelection == "Paper" && computerSelection == "Paper") {
-        return null;
+        null;
     } else if (playerSelection == "Rock" && computerSelection == "Rock") {
-        return null;
+        null;
     } else if (playerSelection == "Scissors" && computerSelection == "Scissors") {
-        return null;
+        null;
     }
 
-    playerValue.innerHTML = playerScore;
-    computerValue.innerHTML = computerScore;
+    console.log(playerScore)
+
+    document.getElementById('playerScore').innerHTML = playerScore;
+    document.getElementById('compScore').innerHTML = computerScore;
 })
 
 const Paper = document.querySelector('#Paper');
@@ -42,35 +42,35 @@ Paper.addEventListener('click', () => {
     const playerSelection = "Paper";
     console.log("Computer chose " + computerSelection)
     console.log("Player chose " + playerSelection)
-    let playerValue = document.getElementsByClassName('playerScore');
-    let computerValue = document.getElementsByClassName('compScore');
+    let playerValue = document.getElementById("playerScore").innerHTML;
+    let computerValue = document.getElementById('compScore').innerHTML;
     let playerScore = parseInt(playerValue);
     let computerScore = parseInt(computerValue);
-    console.log(playerScore)
-    console.log(computerScore)
+
     if (playerSelection == "Rock" && computerSelection == "Scissors") {
-        return playerScore++;
+        playerScore++;
     } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
-        return playerScore++;
+        playerScore++;
     } else if (playerSelection == "Paper" && computerSelection == "Rock") {
-        return playerScore++;
+        playerScore++;
     } else if (playerSelection == "Rock" && computerSelection == "Paper") {
-        return computerScore++;
+        computerScore++;
     } else if (playerSelection == "Scissors" && computerSelection == "Rock") {
-        return computerScore++;
+        computerScore++;
     } else if (playerSelection == "Paper" && computerSelection == "Scissors") {
-        return computerScore++;
+        computerScore++;
     } else if (playerSelection == "Paper" && computerSelection == "Paper") {
-        return null;
+        null;
     } else if (playerSelection == "Rock" && computerSelection == "Rock") {
-        return null;
+        null;
     } else if (playerSelection == "Scissors" && computerSelection == "Scissors") {
-        return null;
+        null;
     }
 
+    console.log(playerScore)
 
-    playerValue.innerHTML = playerScore;
-    computerValue.innerHTML = computerScore;
+    document.getElementById('playerScore').innerHTML = playerScore;
+    document.getElementById('compScore').innerHTML = computerScore;
 })
 
 const Scissors = document.querySelector('#Scissors');
@@ -79,36 +79,35 @@ Scissors.addEventListener('click', () => {
     const playerSelection = "Scissors"
     console.log("Computer chose " + computerSelection)
     console.log("Player chose " + playerSelection)
-    let playerValue = document.getElementsByClassName('playerScore');
-    let computerValue = document.getElementsByClassName('compScore');
+    let playerValue = document.getElementById("playerScore").innerHTML;
+    let computerValue = document.getElementById('compScore').innerHTML;
     let playerScore = parseInt(playerValue);
     let computerScore = parseInt(computerValue);
-    console.log(playerScore)
-    console.log(computerScore)
+
     if (playerSelection == "Rock" && computerSelection == "Scissors") {
-        return playerScore++;
+        playerScore++;
     } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
-        return playerScore++;
+        playerScore++;
     } else if (playerSelection == "Paper" && computerSelection == "Rock") {
-        return playerScore++;
+        playerScore++;
     } else if (playerSelection == "Rock" && computerSelection == "Paper") {
-        return computerScore++;
+        computerScore++;
     } else if (playerSelection == "Scissors" && computerSelection == "Rock") {
-        return computerScore++;
+        computerScore++;
     } else if (playerSelection == "Paper" && computerSelection == "Scissors") {
-        return computerScore++;
+        computerScore++;
     } else if (playerSelection == "Paper" && computerSelection == "Paper") {
-        return null;
+        null;
     } else if (playerSelection == "Rock" && computerSelection == "Rock") {
-        return null;
+        null;
     } else if (playerSelection == "Scissors" && computerSelection == "Scissors") {
-        return null;
+        null;
     }
 
     console.log(playerScore)
-    console.log(computerScore)
-    playerValue.innerHTML = playerScore;
-    computerValue.innerHTML = computerScore;
+
+    document.getElementById('playerScore').innerHTML = playerScore;
+    document.getElementById('compScore').innerHTML = computerScore;
 })
 
 //This needs to be updated
