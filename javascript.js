@@ -5,12 +5,12 @@ Rock.addEventListener('click', () => {
     const playerSelection = "Rock";
     console.log("Computer chose " + computerSelection)
     console.log("Player chose " + playerSelection)
-    let playerValue = document.getElementsByClassName('playerScore').innerHTML;
-    let computerValue = document.getElementsByClassName('compScore').innerHTML;
-    console.log(playerValue[0])
-    let playerScore = parseInt(playerValue[0]);
+    let playerValue = document.getElementById("playerScore").innerHTML;
+    let computerValue = document.getElementById('compScore').innerHTML;
+    console.log(playerValue);
+    let playerScore = parseInt(playerValue);
     let computerScore = parseInt(computerValue);
-    console.log(playerScore)
+    console.log(playerScore+15)
     console.log(computerScore)
     if (playerSelection == "Rock" && computerSelection == "Scissors") {
         return playerScore++;
