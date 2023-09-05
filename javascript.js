@@ -5,8 +5,8 @@ Rock.addEventListener('click', () => {
     const playerSelection = "Rock";
     console.log("Computer chose " + computerSelection)
     console.log("Player chose " + playerSelection)
-    let playerValue = document.getElementsByClassName('playerScore');
-    let computerValue = document.getElementsByClassName('compScore');
+    let playerValue = document.getElementsByClassName('playerScore').innerHTML;
+    let computerValue = document.getElementsByClassName('compScore').innerHTML;
     console.log(playerValue[0])
     let playerScore = parseInt(playerValue[0]);
     let computerScore = parseInt(computerValue);
