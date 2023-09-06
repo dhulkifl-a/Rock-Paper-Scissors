@@ -151,6 +151,11 @@ function playRound(){
 }
 
 
+if (playerScore == 5 || computerScore == 5) {
+    return alert("Game Over Dude")
+}
+
+
 function game(){
     let playerScore = 0;
     let computerScore = 0;
@@ -183,4 +188,3 @@ function game(){
     }
 }
 
-//console.log(playRound())
