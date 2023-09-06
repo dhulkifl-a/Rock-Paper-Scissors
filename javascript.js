@@ -34,6 +34,10 @@ Rock.addEventListener('click', () => {
 
     document.getElementById('playerScore').innerHTML = playerScore;
     document.getElementById('compScore').innerHTML = computerScore;
+
+    if (playerScore == 5 || computerScore == 5) {
+       setTimeout(() => {alert("Game Over Dude"); }, 10)
+    }
 })
 
 const Paper = document.querySelector('#Paper');
@@ -71,6 +75,10 @@ Paper.addEventListener('click', () => {
 
     document.getElementById('playerScore').innerHTML = playerScore;
     document.getElementById('compScore').innerHTML = computerScore;
+
+    if (playerScore == 5 || computerScore == 5) {
+        setTimeout(() => { alert("Game Over Dude"); }, 10)
+    }
 })
 
 const Scissors = document.querySelector('#Scissors');
@@ -108,6 +116,10 @@ Scissors.addEventListener('click', () => {
 
     document.getElementById('playerScore').innerHTML = playerScore;
     document.getElementById('compScore').innerHTML = computerScore;
+
+    if (playerScore == 5 || computerScore == 5) {
+        setTimeout(() => { alert("Game Over Dude"); }, 10)
+    }
 })
 
 //This needs to be updated
@@ -150,10 +162,6 @@ function playRound(){
     }
 }
 
-
-if (playerScore == 5 || computerScore == 5) {
-    return alert("Game Over Dude")
-}
 
 
 function game(){
