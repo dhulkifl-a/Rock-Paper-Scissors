@@ -1,142 +1,25 @@
 
-const Rock = document.querySelector('#Rock');
-Rock.addEventListener('click', () => {
-    const computerSelection = getComputerChoice();
-    const playerSelection = "Rock";
-    console.log("Computer chose " + computerSelection)
-    console.log("Player chose " + playerSelection)
-    let playerValue = document.getElementById("playerScore").innerHTML;
-    let computerValue = document.getElementById('compScore').innerHTML;
-    let playerScore = parseInt(playerValue);
-    let computerScore = parseInt(computerValue);
-    
-    if (playerSelection == "Rock" && computerSelection == "Scissors") {
-        playerScore++;
-    } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
-        playerScore++;
-    } else if (playerSelection == "Paper" && computerSelection == "Rock") {
-        playerScore++;
-    } else if (playerSelection == "Rock" && computerSelection == "Paper") {
-        computerScore++;
-    } else if (playerSelection == "Scissors" && computerSelection == "Rock") {
-        computerScore++;
-    } else if (playerSelection == "Paper" && computerSelection == "Scissors") {
-        computerScore++;
-    } else if (playerSelection == "Paper" && computerSelection == "Paper") {
-        null;
-    } else if (playerSelection == "Rock" && computerSelection == "Rock") {
-        null;
-    } else if (playerSelection == "Scissors" && computerSelection == "Scissors") {
-        null;
-    }
+//Get from HTML
+const Rockbtn = document.querySelector('#Rock');
+const Paperbtn = document.querySelector('#Paper');
+const Scissorsbtn = document.querySelector('#Scissor');
+let playerValue = document.getElementById("playerScore").innerHTML;
+let compValue = document.getElementById('compScore').innerHTML;
+let playerScore = parseInt(playerValue);
+let compScore = parseInt(compValue);
 
-    console.log(playerScore)
-
-    document.getElementById('playerScore').innerHTML = playerScore;
-    document.getElementById('compScore').innerHTML = computerScore;
-
-    if (playerScore == 5 || computerScore == 5) {
-       setTimeout(() => {alert("Game Over Dude"); }, 0.5)
-        document.getElementById('playerScore').innerHTML = 0;
-        document.getElementById('compScore').innerHTML = 0;
-    }
-    
-
-})
-
-const Paper = document.querySelector('#Paper');
-Paper.addEventListener('click', () => {
-    const computerSelection = getComputerChoice();
-    const playerSelection = "Paper";
-    console.log("Computer chose " + computerSelection)
-    console.log("Player chose " + playerSelection)
-    let playerValue = document.getElementById("playerScore").innerHTML;
-    let computerValue = document.getElementById('compScore').innerHTML;
-    let playerScore = parseInt(playerValue);
-    let computerScore = parseInt(computerValue);
-
-    if (playerSelection == "Rock" && computerSelection == "Scissors") {
-        playerScore++;
-    } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
-        playerScore++;
-    } else if (playerSelection == "Paper" && computerSelection == "Rock") {
-        playerScore++;
-    } else if (playerSelection == "Rock" && computerSelection == "Paper") {
-        computerScore++;
-    } else if (playerSelection == "Scissors" && computerSelection == "Rock") {
-        computerScore++;
-    } else if (playerSelection == "Paper" && computerSelection == "Scissors") {
-        computerScore++;
-    } else if (playerSelection == "Paper" && computerSelection == "Paper") {
-        null;
-    } else if (playerSelection == "Rock" && computerSelection == "Rock") {
-        null;
-    } else if (playerSelection == "Scissors" && computerSelection == "Scissors") {
-        null;
-    }
-
-    console.log(playerScore)
-
-    document.getElementById('playerScore').innerHTML = playerScore;
-    document.getElementById('compScore').innerHTML = computerScore;
-
-    if (playerScore == 5 || computerScore == 5) {
-        setTimeout(() => { alert("Game Over Dude"); }, 10)
-        document.getElementById('playerScore').innerHTML = 0;
-        document.getElementById('compScore').innerHTML = 0;
-    }
+//Event Listeners
+Rockbtn.addEventListener('click', () => handleClick('Rock'));
+Paperbtn.addEventListener('click', () => handleClick('Paper'));
+Scissorsbtn.addEventListener('click', () => handleClick('Scissors') );
 
 
-})
+//Functions
 
-const Scissors = document.querySelector('#Scissors');
-Scissors.addEventListener('click', () => {
-    const computerSelection = getComputerChoice();
-    const playerSelection = "Scissors"
-    console.log("Computer chose " + computerSelection)
-    console.log("Player chose " + playerSelection)
-    let playerValue = document.getElementById("playerScore").innerHTML;
-    let computerValue = document.getElementById('compScore').innerHTML;
-    let playerScore = parseInt(playerValue);
-    let computerScore = parseInt(computerValue);
-
-    if (playerSelection == "Rock" && computerSelection == "Scissors") {
-        playerScore++;
-    } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
-        playerScore++;
-    } else if (playerSelection == "Paper" && computerSelection == "Rock") {
-        playerScore++;
-    } else if (playerSelection == "Rock" && computerSelection == "Paper") {
-        computerScore++;
-    } else if (playerSelection == "Scissors" && computerSelection == "Rock") {
-        computerScore++;
-    } else if (playerSelection == "Paper" && computerSelection == "Scissors") {
-        computerScore++;
-    } else if (playerSelection == "Paper" && computerSelection == "Paper") {
-        null;
-    } else if (playerSelection == "Rock" && computerSelection == "Rock") {
-        null;
-    } else if (playerSelection == "Scissors" && computerSelection == "Scissors") {
-        null;
-    }
-
-    console.log(playerScore)
-
-    document.getElementById('playerScore').innerHTML = playerScore;
-    document.getElementById('compScore').innerHTML = computerScore;
-
-    if (playerScore == 5 || computerScore == 5) {
-        setTimeout(() => { alert("Game Over Dude"); }, 10)
-        document.getElementById('playerScore').innerHTML = 0;
-        document.getElementById('compScore').innerHTML = 0;
-    }
-
-})
-
-//This needs to be updated
-function getComputerChoice(){
+//Get Computer Choice
+function getComputerChoice() {
     let num = Math.floor((Math.random() * 3) + 1);
-    
+
     if (num == 1) {
         return "Rock"
     } else if (num == 2) {
@@ -146,64 +29,56 @@ function getComputerChoice(){
     }
 }
 
-//Can be kept the same but remove the prompt
-function playRound(){
+//Handle Click Event
+function handleClick(playerSelection){
     const computerSelection = getComputerChoice();
-    const playerSelection = getPlayerChoice();
+    playRound(playerSelection, computerSelection);
+
+    //Update 
+    UpdateScore(playerScore, compScore);
+
+    isGameOver(playerScore, compScore);
+}
+
+//Play One Round of Game
+function playRound(playerSelection, computerSelection) {
     console.log("Computer chose " + computerSelection)
-    console.log("Player chose "+ playerSelection)
+    console.log("Player chose " + playerSelection)
     if (playerSelection == "Rock" && computerSelection == "Scissors") {
-        return true;
+       return playerScore++;
     } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
-        return true;
-    } else if (playerSelection == "Paper" && computerSelection == "Rock"){
-        return true;
-    } else if (playerSelection == "Rock" && computerSelection == "Paper"){
-        return false;
-    } else if (playerSelection == "Scissors" && computerSelection == "Rock"){
-        return false;
-    } else if (playerSelection == "Paper" && computerSelection == "Scissors"){
-        return false;
+        return playerScore++;
+    } else if (playerSelection == "Paper" && computerSelection == "Rock") {
+        return playerScore++;
+    } else if (playerSelection == "Rock" && computerSelection == "Paper") {
+        return compScore++;
+    } else if (playerSelection == "Scissors" && computerSelection == "Rock") {
+        return compScore++;
+    } else if (playerSelection == "Paper" && computerSelection == "Scissors") {
+        return compScore++;
     } else if (playerSelection == "Paper" && computerSelection == "Paper") {
         return null;
-    } else if (playerSelection == "Rock" && computerSelection == "Rock"){
+    } else if (playerSelection == "Rock" && computerSelection == "Rock") {
         return null;
     } else if (playerSelection == "Scissors" && computerSelection == "Scissors") {
         return null;
     }
 }
 
+//Update the Score and attach to HTML
+function UpdateScore(playerScore, compScore){
+    document.getElementById('playerScore').innerHTML = playerScore;
+    document.getElementById('compScore').innerHTML = computerScore;
+}
 
+//Check if Game is over
+function isGameOver(playerScore, compScore) {
 
-function game(){
-    let playerScore = 0;
-    let computerScore = 0;
-    
-    let value = playRound();
-        if (value == true) {
-            playerScore ++;
-            console.log("player wins")
-            console.log("The players Score is " + playerScore)
-            console.log("The computers Score is " + computerScore)
-        } else if (value == false) {
-            computerScore ++;
-            console.log("computer wins")
-            console.log("The computers Score is " + computerScore)
-            console.log("The players Score is " + playerScore)
-        } else {
-            console.log("It's a Draw!")
-            console.log("The computers Score is " + computerScore)
-            console.log("The players Score is " + playerScore)
-        }
-        console.log("------------------")
-    
-    
-    if (playerScore > computerScore) {
-        return "You won the game!"
-    } else if (computerScore > playerScore) {
-        return "gg you lost to the computer!"
-    } else {
-        return "It's a draw, play again?"
+    if (playerScore == 5 || compScore == 5) {
+        setTimeout(() => { alert("Game Over Dude"); }, 0.5)
+        document.getElementById('playerScore').innerHTML = 0;
+        document.getElementById('compScore').innerHTML = 0;
     }
+
 }
 
