@@ -76,7 +76,7 @@ function openPopup(){
     popup.classList.add("open-popup");
 }
 
-function ClosePopup() {
+function closePopup() {
     popup.classList.remove("open-popup");
     document.getElementById('playerScore').innerHTML = 0;
     document.getElementById('compScore').innerHTML = 0;
