@@ -68,7 +68,7 @@ function playRound(playerSelection, computerSelection) {
 //Update the Score and attach to HTML
 function UpdateScore(playerScore, compScore){
     document.getElementById('playerScore').innerHTML = playerScore;
-    document.getElementById('compScore').innerHTML = computerScore;
+    document.getElementById('compScore').innerHTML = compScore;
 }
 
 //Check if Game is over
