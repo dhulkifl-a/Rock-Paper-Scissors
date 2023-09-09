@@ -2,7 +2,7 @@
 //Get from HTML
 const Rockbtn = document.querySelector('#Rock');
 const Paperbtn = document.querySelector('#Paper');
-const Scissorsbtn = document.querySelector('#Scissor');
+const Scissorsbtn = document.querySelector('#Scissors');
 let playerValue = document.getElementById("playerScore").innerHTML;
 let compValue = document.getElementById('compScore').innerHTML;
 let playerScore = parseInt(playerValue);
