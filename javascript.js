@@ -78,8 +78,10 @@ function openPopup(){
 
 function closePopup() {
     popup.classList.remove("open-popup");
-    document.getElementById('playerScore').innerHTML = 0;
-    document.getElementById('compScore').innerHTML = 0;
+    playerScore = 0;
+    compScore = 0;
+    document.getElementById('playerScore').innerHTML = playerScore;
+    document.getElementById('compScore').innerHTML = compScore;
 }
 
 //Check if Game is over
