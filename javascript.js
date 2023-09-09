@@ -36,7 +36,7 @@ Rock.addEventListener('click', () => {
     document.getElementById('compScore').innerHTML = computerScore;
 
     if (playerScore == 5 || computerScore == 5) {
-       setTimeout(() => {alert("Game Over Dude"); }, 10)
+       setTimeout(() => {alert("Game Over Dude"); }, 0.5)
         document.getElementById('playerScore').innerHTML = 0;
         document.getElementById('compScore').innerHTML = 0;
     }
