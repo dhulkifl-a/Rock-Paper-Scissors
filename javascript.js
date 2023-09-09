@@ -3,6 +3,7 @@
 const Rockbtn = document.querySelector('#Rock');
 const Paperbtn = document.querySelector('#Paper');
 const Scissorsbtn = document.querySelector('#Scissors');
+let popup = document.getElementById("popup");
 let playerValue = document.getElementById("playerScore").innerHTML;
 let compValue = document.getElementById('compScore').innerHTML;
 let playerScore = parseInt(playerValue);
@@ -71,13 +72,21 @@ function UpdateScore(playerScore, compScore){
     document.getElementById('compScore').innerHTML = compScore;
 }
 
+function openPopup(){
+    popup.classList.add("open-popup");
+}
+
+function ClosePopup() {
+    popup.classList.remove("open-popup");
+    document.getElementById('playerScore').innerHTML = 0;
+    document.getElementById('compScore').innerHTML = 0;
+}
+
 //Check if Game is over
 function isGameOver(playerScore, compScore) {
 
     if (playerScore == 5 || compScore == 5) {
-        setTimeout(() => { alert("Game Over Dude"); }, 0.5)
-        document.getElementById('playerScore').innerHTML = 0;
-        document.getElementById('compScore').innerHTML = 0;
+        openPopup()
     }
 
 }
