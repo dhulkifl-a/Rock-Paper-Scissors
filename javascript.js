@@ -89,10 +89,10 @@ function closePopup() {
 function isGameOver(playerScore, compScore) {
 
     if (playerScore == 5) {
-        document.getElementById('end-game-message').innerHTML = "Congratulations you won!!"
+        document.getElementById('end-game-message').innerHTML = "Congratulations, You Win!"
         openPopup()
     } else if (compScore == 5) {
-        document.getElementById('end-game-message').innerHTML = "You Lost, Computer wins!!"
+        document.getElementById('end-game-message').innerHTML = "You Lost, Computer Wins!"
         openPopup()
     }
 
