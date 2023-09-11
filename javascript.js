@@ -82,6 +82,7 @@ function closePopup() {
     compScore = 0;
     document.getElementById('playerScore').innerHTML = playerScore;
     document.getElementById('compScore').innerHTML = compScore;
+    document.getElementById('end-game-message').innerHTML = ""
 }
 
 //Check if Game is over
@@ -92,6 +93,7 @@ function isGameOver(playerScore, compScore) {
         openPopup()
     } else if (compScore == 5) {
         document.getElementById('end-game-message').innerHTML = "You Lost, Computer wins!!"
+        openPopup()
     }
 
 }
