@@ -1,6 +1,6 @@
 html {
     font-size: 10px;
-    background: url('./images/000_the-best-wwe-action-figures-d29ea5-2.webp') no-repeat center center fixed;
+    background: rgba(0, 0, 0, 0.4); /*url('./images/000_the-best-wwe-action-figures-d29ea5-2.webp') no-repeat center center fixed;*/
     background-size: cover;
 }
 
@@ -55,8 +55,13 @@ button {
     width: 10rem;
     text-align: center;
     color: white;
+    cursor: pointer;
     background: rgba(0, 0, 0, 0.4);
     text-shadow: 0 0 .5rem black;
+}
+
+button:hover, .popup button:hover {
+    box-shadow: inset 0 0 0 50px rgba(0, 0, 0, 0.2);;
 }
 
 .scoreboard {
