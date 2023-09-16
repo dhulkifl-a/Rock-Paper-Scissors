@@ -31,10 +31,11 @@ h3 {
 
 .preview {
     height: 100px;
-    margin: 20px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    font-size: 15px;
+    font-weight: 500;
 }
 .card {
     display: flex;
