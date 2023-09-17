@@ -173,9 +173,9 @@ function UpdateTitle(playerSelection, computerSelection) {
         document.getElementById("secondary-title").innerHTML = "You both picked paper";
     } else if (playerSelection == "Rock" && computerSelection == "Rock") {
         document.getElementById("main-title").innerHTML = "Draw!";
-        document.getElementById("secondary-title").innerHTML = "you both picked rock";
+        document.getElementById("secondary-title").innerHTML = "You both picked rock";
     } else if (playerSelection == "Scissors" && computerSelection == "Scissors") {
         document.getElementById("main-title").innerHTML = "Draw!";
-        document.getElementById("secondary-title").innerHTML = "you both picked scissors";
+        document.getElementById("secondary-title").innerHTML = "You both picked scissors";
     }
 }
