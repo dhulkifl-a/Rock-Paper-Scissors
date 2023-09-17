@@ -16,11 +16,11 @@ let PaperImg_computer = document.createElement('img');
 let ScissorsImg_computer = document.createElement('img');
 RockImg_player.src = "./images/Rock.png";
 RockImg_player.setAttribute("width", "82");
-PaperImg_player.src = "images/paper2.png";
+PaperImg_player.src = "images/Paper_Player.png";
 PaperImg_player.setAttribute("width", "82");
 ScissorsImg_player.src = "images/Scissors.png";
 ScissorsImg_player.setAttribute("width", "82");
-RockImg_computer.src = "./images/Rock.png";
+RockImg_computer.src = "./images/Rock_Comp.png";
 RockImg_computer.setAttribute("width", "82");
 PaperImg_computer.src = "images/paper2.png";
 PaperImg_computer.setAttribute("width", "82");
@@ -161,13 +161,13 @@ function UpdateTitle(playerSelection, computerSelection) {
         document.getElementById("secondary-title").innerHTML = "Paper beats rock";
     } else if (playerSelection == "Rock" && computerSelection == "Paper") {
         document.getElementById("main-title").innerHTML = "You Lost!";
-        document.getElementById("secondary-title").innerHTML = "Paper beats Rock";
+        document.getElementById("secondary-title").innerHTML = "Rock loses to paper";
     } else if (playerSelection == "Scissors" && computerSelection == "Rock") {
         document.getElementById("main-title").innerHTML = "You Lost!";
-        document.getElementById("secondary-title").innerHTML = "Rock beats scissors";
+        document.getElementById("secondary-title").innerHTML = "Scissors loses to rock";
     } else if (playerSelection == "Paper" && computerSelection == "Scissors") {
         document.getElementById("main-title").innerHTML = "You Lost!";
-        document.getElementById("secondary-title").innerHTML = "Scissors beats paper";
+        document.getElementById("secondary-title").innerHTML = "Paper loses to scissors";
     } else if (playerSelection == "Paper" && computerSelection == "Paper") {
         document.getElementById("main-title").innerHTML = "Draw!";
         document.getElementById("secondary-title").innerHTML = "You both picked paper";
